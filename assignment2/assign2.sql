@@ -1,0 +1,33 @@
+-- drop table if exists Participate;
+-- drop table if exists Game;
+-- drop table if exists SoccerPlayer;
+-- drop table if exists Team;
+-- CREATE TABLE Team (
+--   name VARCHAR(45) NOT NULL,
+--   city VARCHAR(45) NOT NULL,
+--   PRIMARY KEY (name));
+-- CREATE TABLE SoccerPlayer (
+--   id INT NOT NULL,
+--   name VARCHAR(45) NOT NULL,
+--   tName VARCHAR(45) NOT NULL,
+--   PRIMARY KEY (id,tName),
+--   FOREIGN KEY (tName) REFERENCES Team(name));
+-- CREATE TABLE Game (
+--   id INT AUTO_INCREMENT,
+--   hTeam VARCHAR(45) NOT NULL,
+--   aTeam VARCHAR(45) NOT NULL,
+--   hGoals INT NOT NULL,
+--   aGoals INT NOT NULL,
+--   date DATE NOT NULL,
+--   PRIMARY KEY (id),
+--   FOREIGN KEY (hTeam) REFERENCES Team(name), 
+--   FOREIGN KEY (aTeam) REFERENCES Team(name));
+-- CREATE TABLE Participate (
+--   id INT AUTO_INCREMENT, 
+--   spID INT NOT NULL,
+--   spTeam VARCHAR(45) NOT NULL,
+--   gameID INT NOT NULL,
+--   goals INT NOT NULL,
+--   PRIMARY KEY (id),
+--   FOREIGN KEY (spID,spTeam) REFERENCES SoccerPlayer(id,tName), 
+--   FOREIGN KEY (gameID) REFERENCES Game(id));

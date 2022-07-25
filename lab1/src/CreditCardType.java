@@ -1,0 +1,4 @@
+enum CCType {
+    VISA, MC, AMERICAN, EXPRESS, DISCORVER
+}
+
