@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1306.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finalproject.finalproject.DashboardController">
+  <tabs>
+    <Tab fx:id="tab1" closable="false" text="Add Student">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="600.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="351.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="124.0" text="Add Student" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="First Name" GridPane.rowIndex="1" />
+                        <Label text="Last Name" GridPane.rowIndex="2" />
+                        <Label text="Email" GridPane.rowIndex="3" />
+                        <Label text="Day of Birth" GridPane.rowIndex="4" />
+                        <Label text="Major" GridPane.rowIndex="5" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearAddStudent" text="Clear" />
+                              <Button fx:id="submit" mnemonicParsing="false" onAction="#onSubmitAddStudent" text="Submit" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <TextField fx:id="firstNameAS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="lastNameAS" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="emailAS" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="dobAS" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ChoiceBox fx:id="majorAS" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="errorAddStudent" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tab2" closable="false" text="Add Professor">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="256.0" text="Add Professor" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="First Name" GridPane.rowIndex="1" />
+                        <Label text="Last Name" GridPane.rowIndex="2" />
+                        <Label text="Email" GridPane.rowIndex="3" />
+                        <Label text="Day of Birth" GridPane.rowIndex="4" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearAddProfessor" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitAddProfessor" text="Submit" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <TextField fx:id="firstNameAP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="lastNameAP" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="emailAP" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="dobAP" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="errorAddProfessor" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label text="Department" GridPane.rowIndex="5" />
+                        <ChoiceBox fx:id="majorAP" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="tab3" closable="false" text="Add Course">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="1108.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Course Title" GridPane.rowIndex="1" />
+                        <Label text="Course Name" GridPane.rowIndex="2" />
+                        <Label prefHeight="27.0" prefWidth="171.0" text="Add Course" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Instructor ID" GridPane.rowIndex="3" />
+                        <Label text="Quarter" GridPane.rowIndex="4" />
+                        <TextField fx:id="courseLabelAC" prefHeight="26.0" prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="courseNameAC" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="instructorIdAC" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearAddCourse" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitAddCourse" text="Submit" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="School year" GridPane.rowIndex="5" />
+                        <ChoiceBox fx:id="quarterAC" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ChoiceBox fx:id="schoolyearAC" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="errorAddCourse" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Add Grade">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="316.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Course ID" GridPane.rowIndex="1" />
+                        <Label prefHeight="27.0" prefWidth="171.0" text="Add Grade" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Student ID" GridPane.rowIndex="2" />
+                        <TextField fx:id="courseIDAG" prefHeight="26.0" prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="studentIDAG" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearAddGrade" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitAddGrade" text="Submit" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="Grade" GridPane.rowIndex="3" />
+                        <ChoiceBox fx:id="gradeAG" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="errorAddGrade" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Search Student">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="232.0" text="Search Student" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Student ID" GridPane.rowIndex="1" />
+                        <TextField fx:id="studentIdSS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearSearchStudent" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitSearchStudent" text="Search" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorSearchStudent" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="searchStudentTable" layoutX="30.0" layoutY="160.0" prefHeight="60.0" prefWidth="800.0" />
+                  <TableView fx:id="searchStudentCourseTable" layoutX="30.0" layoutY="250.0" prefHeight="300.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Search Professor">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="232.0" text="Search Professor" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Professor ID" GridPane.rowIndex="1" />
+                        <TextField fx:id="professorIdSP" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearSearchProfessor" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitSearchProfessor" text="Search" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorSearchProfessor" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="searchProfessorTable" layoutX="30.0" layoutY="160.0" prefHeight="60.0" prefWidth="800.0" />
+                  <TableView fx:id="searchProfessorCourseTable" layoutX="30.0" layoutY="250.0" prefHeight="300.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Search Students in a Class">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefHeight="130.0" prefWidth="397.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Search All Students in a Class" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Course ID" GridPane.rowIndex="1" />
+                        <TextField fx:id="courseIDSSC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearSearchStudentsInClass" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitSearchStudentsInClass" text="Search" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorSearchStudentsInClass" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableCourse" layoutX="30.0" layoutY="190.0" prefHeight="360.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Search Course">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Search Course in a Quarter" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearSearchCourseList" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitSearchCourseList" text="Search" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="Quarter" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="schoolYearSCL" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="School Year" GridPane.rowIndex="1" />
+                        <ChoiceBox fx:id="quarterSCL" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="errorSearchCourseList" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableCourseFindCourse" layoutX="30.0" layoutY="190.0" prefHeight="360.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Find Students By GPA">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="1195.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="GPA" GridPane.rowIndex="1" />
+                        <Label text="Find Students by GPA" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearFindStudentGpa" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitFindStudentGpa" text="Submit" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="Major" GridPane.rowIndex="2" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <ChoiceBox fx:id="findStudentGpaChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Slider fx:id="findStudentGpaSlider" majorTickUnit="1.0" max="4.0" minorTickCount="4" prefWidth="200.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                              <Label fx:id="sliderLabel" text="0.00" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorFindStudentGpa" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="findStudentGpaTable" layoutX="30.0" layoutY="190.0" prefHeight="360.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Find Professors By GPA">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="1100.0">
+               <children>
+                  <TableView fx:id="findProfessorGpaTable" layoutX="30.0" layoutY="190.0" prefHeight="360.0" prefWidth="800.0" />
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Class GPA" GridPane.rowIndex="1" />
+                        <Label text="Find Professors by Class GPA" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearFindProfessorGpa" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitFindProfessorGpa" text="Submit" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="Department" GridPane.rowIndex="2" />
+                        <HBox layoutX="30.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <ChoiceBox fx:id="findProfessorGpaChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Slider fx:id="findProfessorGpaSlider" majorTickUnit="1.0" max="4.0" minorTickCount="4" prefWidth="200.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                              <Label fx:id="sliderLabel2" text="0.00" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorFindProfessorGpa" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Remove Student">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="600.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Student ID" GridPane.rowIndex="1" />
+                        <Label prefHeight="27.0" prefWidth="185.0" text="Remove Student" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="studentIdRS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearRemoveStudent" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitRemoveStudent" text="Delete" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorRemoveStudent" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableRemoveStudent" layoutX="30.0" layoutY="170.0" prefHeight="395.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Remove Professor">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Professor ID" GridPane.rowIndex="1" />
+                        <Label prefHeight="27.0" prefWidth="185.0" text="Remove Professor" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="professorIdRP" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearRemoveProfessor" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitRemoveProfessor" text="Delete" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorRemoveProfessor" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableRemoveProfessor" layoutX="30.0" layoutY="170.0" prefHeight="395.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Remove Course">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="1100.0">
+               <children>
+                  <GridPane layoutX="30.0" layoutY="20.0" prefWidth="350.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Course ID" GridPane.rowIndex="1" />
+                        <Label prefHeight="27.0" prefWidth="171.0" text="Remove Course" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="courseIdRC" prefHeight="26.0" prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onClearRemoveCourse" text="Clear" />
+                              <Button mnemonicParsing="false" onAction="#onSubmitRemoveCourse" text="Delete" />
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="errorRemoveCourse" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableRemoveCourse" layoutX="30.0" layoutY="170.0" prefHeight="395.0" prefWidth="800.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
